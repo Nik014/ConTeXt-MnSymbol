@@ -1,0 +1,550 @@
+local mathencodings = fonts.encodings.math
+-- local report_goodies = logs.messenger("mnsymbol")
+
+--[[
+TODO:
+  0. symb-f, symb-c, symb-d
+  1. Insert non-unicode glyphs
+  2. Fix overbrace, underbrace, overgroup
+  3. Make backslash work with \left, \right...
+  4. Disable fake dots in math-vfu
+  5. Disable fake vert in math-vfu?
+  6. Fix sqrt rule thickness
+  7. Vector arrow, up/down arrow, up/down double arrow
+  8. bowtie symbol
+  9. add top/bottom parenthesis and bracket
+]]
+
+local function test_slots(n)
+  local offset = 0x0F000
+  for i=0,9 do
+    mathencodings["symb-a"][offset+i]=n+i
+  end
+end
+
+mathencodings["symb-a"] = {
+  [0x02192] = 0,
+  [0x02191] = 1,
+  [0x02190] = 2,
+  [0x02193] = 3,
+  [0x02197] = 4,
+  [0x02196] = 5,
+  [0x02199] = 6,
+  [0x02198] = 7,
+  [0x021D2] = 8,
+  [0x021D1] = 9,
+  [0x021D0] = 10,
+  [0x021D3] = 11,
+  [0x021D7] = 12,
+  [0x021D6] = 13,
+  [0x021D9] = 14,
+  [0x021D8] = 15,
+  [0x02194] = 16,
+  [0x02195] = 17,
+  -- [] = 18, -- sw-ne arrow
+  -- [] = 19, -- se-nw arrow
+  [0x021D4] = 20,
+  [0x021D5] = 21,
+  -- [] = 22, -- sw-ne double arrow
+  -- [] = 23, -- se-nw double arrow
+  [0x021A0] = 24,
+  [0x0219F] = 25,
+  [0x0219E] = 26,
+  [0x021A1] = 27,
+  -- [] = 28, -- ne two headed arrow
+  -- [] = 29, -- nw two headed arrow
+  -- [] = 30, -- sw two headed arrow
+  -- [] = 31, -- se two headed arrow
+  [0x021A3] = 32,
+  -- [] = 33, -- up arrow with tail
+  [0x021A2] = 34,
+  -- [] = 35, -- down arrow with tail
+  -- [] = 36, -- ne arrow with tail
+  -- [] = 37, -- nw arrow with tail
+  -- [] = 38, -- sw arrow with tail
+  -- [] = 39, -- se arrow with tail
+  [0x021A6] = 40,
+  [0x021A5] = 41,
+  [0x021A4] = 42,
+  [0x021A7] = 43,
+  -- [] = 44, -- ne mapsto
+  -- [] = 45, -- nw mapsto
+  -- [] = 46, -- sw mapsto
+  -- [] = 47, -- se mapsto
+  [0x021AA] = 48,
+  -- [] = 49, -- up arrow with hook
+  [0x021A9] = 50,
+  -- [] = 51, -- down arrow with hook
+  [0x02924] = 52,
+  [0x02923] = 53,
+  [0x02926] = 54,
+  [0x02925] = 55,
+  -- [] = 56, -- right arrow with downward hook
+  -- [] = 57, -- up arrow with downward hook
+  -- [] = 58, -- left arrow with downward hook
+  -- [] = 59, -- down arrow with downward hook
+  -- [] = 60, -- ne arrow with downward hook
+  -- [] = 61, -- nw arrow with downward hook
+  -- [] = 62, -- sw arrow with downward hook
+  -- [] = 63, -- se arrow with downward hook
+  [0x021C0] = 64,
+  [0x021BF] = 65,
+  [0x021BD] = 66,
+  [0x021C2] = 67,
+  -- [] =  68, -- ne upward harpoon
+  -- [] =  69, -- nw upward harpoon
+  -- [] =  70, -- sw upward harpoon
+  -- [] =  71, -- se upward harpoon
+  [0x021C1] = 72,
+  [0x021BE] = 73,
+  [0x021BC] = 74,
+  [0x021C3] = 75,
+  -- [] =  76, -- ne downward harpoon
+  -- [] =  77, -- nw downward harpoon
+  -- [] =  78, -- sw downward harpoon
+  -- [] =  79, -- se downward harpoon
+  [0x0294B] = 80,
+  [0x0294D] = 81,
+  -- [] = 82,
+  -- [] = 83,
+  [0x0294A] = 84,
+  [0x0294C] = 85,
+  -- [] = 86,
+  -- [] = 87,
+  [0x021CC] = 88,
+  [0x0296E] = 89,
+  -- [] = 90,
+  -- [] = 91,
+  [0x021CB] = 92,
+  [0x0296F] = 93,
+  -- [] = 94,
+  -- [] = 95,
+  [0x021E2] = 96,
+  [0x021E1] = 97,
+  [0x021E0] = 98,
+  [0x021E3] = 99,
+  -- [] = 100, -- diagonal dashed arrows
+  -- [] = 101, 
+  -- [] = 102, 
+  -- [] = 103, 
+  [0x022B8] = 104,
+  [0x02AEF] = 105,
+  [0x027DC] = 106,
+  [0x02AF0] = 107,
+  -- [] = 108, -- diagonal arrows with circle head
+  -- [] = 109, 
+  -- [] = 110, 
+  -- [] = 111,
+  -- [] = 112, -- arrows with black circle head
+  -- [] = 113,
+  -- [] = 114,
+  -- [] = 115,
+  -- [] = 116,
+  -- [] = 117,
+  -- [] = 118,
+  -- [] = 119,
+  -- [] = 120, -- arrows with footline head
+  -- ...
+  -- [] = 127,
+  -- [] = 128, -- arrows with semicircle head
+  [0x02ADD] = 131,
+  -- ...
+  -- [] = 135,
+  -- [] = 136, -- arrows with pitchfork head
+  [0x022D4] = 137,
+  -- ...
+  -- [] = 143,
+  [0x021C9] = 144,
+  [0x021C8] = 145,
+  [0x021C7] = 146,
+  [0x021CA] = 147,
+  -- [] = 148, -- diagonal parallel arrows
+  -- ...
+  -- [] = 151,
+  [0x021C4] = 152,
+  [0x021C5] = 153,
+  -- [] = 154, -- diagonal opposite arrows
+  -- [] = 155,
+  [0x021C6] = 156,
+  [0x021F5] = 157,
+  -- [] = 158, -- diagonal opposite arrows
+  -- [] = 159,
+
+  -- squiggly arrows
+  [0x021DD] = 160,
+  -- [] = 161,
+  [0x021DC] = 162,
+  -- ...
+  -- [] = 183,
+
+  -- curved arrows
+  [0x021B7] = 184,
+  -- [] = 185,
+  -- [] = 186,
+  [0x02938] = 187,
+  -- [] = 188,
+  -- [] = 189,
+  [0x02936] = 190,
+  [0x02935] = 191,
+  [0x0293B] = 192,
+  -- [] = 193,
+  [0x021B6] = 194,
+  [0x02939] = 195,
+  [0x02934] = 196,
+  -- [] = 197,
+  -- [] = 198,
+  [0x02937] = 199,
+  -- [] = 200, -- twoheaded curved arrows
+  -- ...
+  -- [] = 207,
+
+  -- [] = 208, -- horizontal line
+  -- [] = 209, -- vertical line
+  -- [] = 210, -- nesw line
+  -- [] = 211, -- nwse line
+  -- [] = 212, -- horizontal double line
+  -- [] = 213, -- vertical double line
+  -- [] = 214, -- nesw double line
+  -- [] = 215, -- nwse double line
+
+  [0x022A2] = 216, -- vdash rotated variants
+  [0x022A6] = 216, -- what's the difference between \vdash and \assert?
+  [0x027C2] = 217,
+  [0x022A3] = 218,
+  -- ...
+  -- [] = 223,
+
+  [0x022A7] = 224, -- vDash
+  [0x022A8] = 224, -- what's the difference between \vDash and \models?
+  -- ...
+  -- [] = 231,
+
+  [0x022A9] = 232, -- Vdash 
+  -- ...
+  -- [] = 239,
+
+  [0x022AB] = 240, -- VDash
+  -- ...
+  -- [] = 247,
+
+  -- [] = 248, -- circle arrows
+  -- ...
+  [0x027F2] = 250, -- anticlockwise
+  [0x027F3] = 252, -- clockwise
+  -- ...
+  -- [] = 255,
+}
+
+-- operators
+mathencodings["symb-c"] = {
+  [0x022C5] = 0x00, -- cdot
+  -- [0x0E000] = 0x01, -- hdotdot
+  [0x02236] = 0x02, -- colon
+  -- [0x0E001] = 0x03, -- udotdot
+  -- [0x0E002] = 0x04, -- ddotdot
+  [0x022EF] = 0x05, -- hdots
+  [0x022EE] = 0x06, -- vdots
+  [0x022F1] = 0x07, -- udots
+  [0x022F2] = 0x08, -- ddots
+  -- [] = 0x09, -- righttherefore
+  [0x02234] = 0x0A, -- therefore
+  -- [] = 0x0B, -- lefttherefore
+  [0x02235] = 0x0C, -- because
+  -- [] = 0x0D, -- diamonddots
+  [0x02237] = 0x0E, -- squaredots
+  -- [] = 0x0F, -- fivedots
+  [0x02212] = 0x10, -- minus
+  -- [] = 0x11, -- medvert
+  -- [] = 0x12, -- medslash
+  -- [] = 0x13, -- medbackslash, setminus
+  [0x0002B] = 0x14, -- plus
+  [0x000D7] = 0x15, -- times
+  [0x000B1] = 0x16, -- pm
+  [0x02213] = 0x17, -- mp
+  [0x02238] = 0x18, -- dotminus
+  -- [] = 0x19, -- dotmedvert
+  [0x02A2A] = 0x1A, -- minusdot
+  -- [] = 0x1B, -- medvertdot
+  [0x000F7] = 0x1C, -- div
+  -- [] = 0x1D, -- slashdiv
+  -- [] = 0x1E, -- vertdiv
+  -- [] = 0x1F, -- backslashdiv
+  [0x000AC] = 0x20, -- neg
+  [0x02310] = 0x21, -- backneg
+  -- [] = 0x22, -- dtimes
+  [0x022CA] = 0x23, -- rtimes
+  -- [] = 0x24, -- utimes
+  [0x022C9] = 0x25, -- ltimes
+  -- [0x022C8] = 0x26, -- bowtie
+  [0x029D6] = 0x27, -- vertbowtie
+  -- [] = 0x28, -- rightY
+  -- [] = 0x29, -- upY
+  -- [] = 0x2A, -- leftY
+  -- [] = 0x2B, -- downY
+  [0x02227] = 0x2C, -- wedge
+  [0x02228] = 0x2D, -- vee
+  -- [] = 0x2E, -- wedgedot
+  -- [] = 0x2F, -- veedot
+  -- [] = 0x30, -- doublewedge
+  -- [] = 0x31, -- doublevee
+  -- [] = 0x32, -- curlywedge
+  -- [] = 0x33, -- curlyvee
+  -- [] = 0x34, -- curlywedgedot
+  -- [] = 0x35, -- curlyveedot
+  -- [] = 0x36, -- doublecurlywedge
+  -- [] = 0x37, -- doublecurlyvee
+  [0x0222A] = 0x38, -- cup
+  [0x02229] = 0x39, -- cap
+  -- [] = 0x3A, -- doublecup
+  -- [] = 0x3B, -- doublecap
+  -- [] = 0x3C, -- cupdot
+  -- [] = 0x3D, -- capdot
+  -- [] = 0x3E, -- cupplus
+  -- [] = 0x3F, -- capplus
+  [0x02294] = 0x40, -- sqcup
+  [0x02293] = 0x41, -- sqcap
+  -- [] = 0x50, -- triangleright
+  -- [] = 0x60, -- oplus
+  -- [] = 0x70, -- boxminus
+  -- [] = 0x80, -- smallstar
+  -- [] = 0x90, -- hcrossing
+  -- [] = 0xA0, -- checkmark
+  -- [] = 0xB0, -- beth
+  -- [] = 0xC0, -- upslice
+  -- [] = 0xD0, -- maltese
+  -- [] = 0xDB, -- closedequal
+}
+
+-- relations
+mathencodings["symb-d"] = {
+  -- [] = 0x00, -- equal
+  -- [] = 0x10, -- bumpeq
+  -- [] = 0x20, -- smileeq
+  -- [] = 0x30, -- sqsmilefrown
+  -- [] = 0x40, -- less
+  -- [] = 0x50, -- ll
+  -- [] = 0x60, -- subset
+  -- [] = 0x70, -- precapprox
+  -- [] = 0x80, -- nsimeq
+  -- [] = 0x90, -- nsmile
+  -- [] = 0xA0, -- nsmilefrowneq
+  -- [] = 0xB0, -- nsqsmileeqfrown
+  -- [] = 0xC0, -- nlessgtr
+  -- [] = 0xD0, -- nsqsubset
+  -- [] = 0xE0, -- nprec
+  -- [] = 0xF0, -- lneqq
+}
+
+-- braces, brackets, slash, backslash, sqrt
+mathencodings["symb-e"] = {
+  -- 50-54 ullcorner
+  -- 55-59 ulrcorner
+
+  -- 66-70 - lsem, double left bracket
+  -- 71-75 - rsem, double right bracket
+  -- 76/77 - left/right double bracket top
+  -- 78/79 - left/right double bracket bot
+  -- 80/81 - left/right double bracket mid
+
+  -- 94/95 - wavy/double wavy extender - should left and right variants be mirrored?
+
+  -- 126-130 - slash
+  -- 131-135 - backslash - how to make it work with left/right/middle in ConTeXt
+
+  -- 136-140 - lparen
+  -- 141-145 - rparen
+  -- 146/147 - left/right paren top
+  -- 148/149 - left/right paren bot
+  -- 150/151 - left/right paren mid
+
+  -- 152-156 - left brace
+  -- 157-161 - right brace
+  -- 162/163 - left/right brace top
+  -- 164/165 - left/right brace bot 
+  -- 166/167 - left/right brace mid
+  -- 168 - brace extender
+
+  -- 169-173 - overbrace
+  -- 174-178 - underbrace
+  -- 179/180 - over/underbrace left
+  -- 181/182 - over/underbrace right
+  -- 183/184 - over/underbrace mid
+  -- 185 - over/underbrace extender
+
+  -- 186-190 - sqrt
+  -- 191,192,193 -- root over,surd,extender
+  -- 194-198 -- widehat
+  -- 199-203 -- widetilde
+  -- 204-208 -- overgroup
+
+  -- 209 - vector arrow
+  -- 210 - vector arrow extender
+  -- 211 - ?
+  -- 212 - ?
+  -- 213 - uparrow
+  -- 214 - downarrow
+  -- 215 - arrow extender
+  -- 216 - up double arrow
+  -- 217 - down double arrow
+  -- 218 - double arrow extender
+}
+
+local private_slot = 0xFF000
+local delim_table = {}
+
+local function make_delimiter(unicode, index, variants, is_horizontal)
+  mathencodings["symb-e"][unicode] = index
+  delim_table[unicode] = {}
+  delim_table[unicode]["slot"] = index
+  delim_table[unicode]["next"] = private_slot
+  for i = 0,2 do
+    mathencodings["symb-e"][private_slot+i] = index + i + 1
+    delim_table[private_slot+i] = {}
+    delim_table[private_slot+i]["slot"] = index + i + 1
+    delim_table[private_slot+i]["next"] = private_slot + i + 1
+  end
+  mathencodings["symb-e"][private_slot+3] = index + 4
+  delim_table[private_slot+3] = {}
+  delim_table[private_slot+3]["slot"] = index + 4
+  if variants then
+    unicode_variants = {}
+    for i = 1,#variants do
+      mathencodings["symb-e"][private_slot+3+i] = variants[i]
+      unicode_variants[i] = private_slot+3+i
+    end
+    if is_horizontal then
+      --delim_table[private_slot+3]["vvar"] = unicode_variants
+      delim_table[unicode]["hvar"] = unicode_variants
+    else
+      --delim_table[private_slot+3]["vvar"] = unicode_variants
+      delim_table[unicode]["vvar"] = unicode_variants
+    end
+    private_slot = private_slot + 4 + #variants
+  else
+    private_slot = private_slot + 4
+  end
+end
+
+--[[
+  syntax:
+  make_delimiter(unicode, tfm_slot, {bottom, middle, top}, is_horizontal)
+  make_delimiter(unicode, tfm_slot, {bottom, extender, middle, extender, top}, is_horizontal)
+]]
+
+make_delimiter(0x0005B, 0x00, {62, 64, 60}, false) -- left square bracket
+make_delimiter(0x0005D, 0x05, {63, 65, 61}, false) -- right square bracket
+make_delimiter(0x0230A, 10, {62, 64, 64}, false) -- lfloor
+make_delimiter(0x0230B, 15, {63, 65, 65}, false) -- rfloor
+make_delimiter(0x02308, 20, {64, 64, 60}, false) -- lceil
+make_delimiter(0x02309, 25, {65, 65, 61}, false) -- lceil
+make_delimiter(0x0231C, 30, nil, false) -- ulcorner
+make_delimiter(0x0231D, 35, nil, false) -- urcorner
+make_delimiter(0x0231E, 40, nil, false) -- llcorner
+make_delimiter(0x0231F, 45, nil, false) -- ulcorner
+make_delimiter(0x027E6, 66, {78, 80, 76}, false) -- left double bracket
+make_delimiter(0x027E7, 71, {79, 81, 77}, false) -- right double bracket
+make_delimiter(0x0007C, 82, {82, 82, 82}, false) -- vert, mid
+make_delimiter(0x02016, 88, {88, 88, 88}, false) -- double vert
+make_delimiter(0x027E8, 96, nil, false) -- langle
+make_delimiter(0x027E9, 101, nil, false) -- rangle
+make_delimiter(0x02989, 106, nil, false) -- langlebar
+make_delimiter(0x0298A, 111, nil, false) -- ranglebar
+make_delimiter(0x027EA, 116, nil, false) -- llangle
+make_delimiter(0x027EB, 121, nil, false) -- rrangle
+make_delimiter(0x0002F, 126, nil, false) -- slash, solidus
+make_delimiter(0x0005C, 131, nil, false) -- backslash, reverse solidus - how to make it work with \left, \right in ConTeXt?
+make_delimiter(0x00028, 136, {148, 150, 146}, false) -- lparen
+make_delimiter(0x00029, 141, {149, 151, 147}, false) -- rparen
+make_delimiter(0x0007B, 152, {164, 168, 166, 168, 162}, false) -- left brace
+make_delimiter(0x0007D, 157, {165, 168, 167, 168, 163}, false) -- right brace
+
+make_delimiter(0x023DE, 169, {179,185,183,185,181}, true) -- overbrace
+make_delimiter(0x023DF, 174, {180,185,184,185,182}, true) -- underbrace
+make_delimiter(0x00302, 194, nil, true) -- widehat
+make_delimiter(0x00303, 199, nil, true) -- widetilde
+make_delimiter(0x023DC, 204, nil, true) -- overgroup
+
+make_delimiter(0x0221A, 186, {192,193,191}, false) -- sqrt
+
+-- symbols, i.e. big operators
+mathencodings["symb-f"] = {
+}
+
+function custE(characters, fid)
+
+  local function variand(extender, glyph)
+    return {
+      ["advance"] = 0,
+      ["end"] = 0,
+      ["extender"] = extender,
+      ["glyph"] = glyph,
+      ["start"] = 0,
+    }
+  end
+
+  local function variants(glyphs)
+    if #glyphs==3 then
+      return {
+        variand(0, glyphs[1]),
+        variand(1, glyphs[2]),
+        variand(0, glyphs[3]),
+      }
+    elseif #glyphs == 5 then
+      return {
+        variand(0, glyphs[1]),
+        variand(1, glyphs[2]),
+        variand(0, glyphs[3]),
+        variand(1, glyphs[4]),
+        variand(0, glyphs[5]),
+      }
+    end
+  end
+
+  for unicode, overlay in next, delim_table do
+    for k, v in next, overlay do
+      if k == "next" then
+        characters[unicode]["next"] = v
+      end
+      if k == "slot" then
+        characters[unicode]["commands"] = {{"slot", fid, v}}
+      end
+      if k == "vvar" then
+        characters[unicode]["vert_variants"] = variants(v)
+      end
+      if k == "hvar" then
+        characters[unicode]["horiz_variants"] = variants(v)
+      end
+    end
+  end
+
+--  inspect(characters[0x0007C])
+--  inspect(characters[1044555])
+end
+
+return {
+  name = "mnsymbol",
+  version = "1.00",
+  comment = "Goodies that complement MnSymbol fonts.",
+  author = "Nikola Milinković",
+  copyright = "Nikola Milinković",
+  mathematics = {
+    mapfiles = {
+      "MnSymbol.map"
+    },
+    virtuals = {
+      ["mnsymbol"] = {
+        { name = "MnSymbol10.pfb", features = "virtualmath", main = true },
+        -- { name = "MnSymbol10.otf", features = "virtualmath", vector = "tex-mr-missing" },
+        { name = "name:minionproitalic", vector="tex-it", skewchar=0x7F },
+        -- { name = "name:SerifItalic", vector="tex-mi", skewchar=0x7F },
+        --{ name = "Minion_Pro_Italic_v2030.otf", vector ="tex-it", skewchar=0x7F },
+        { name = "MnSymbolA10.tfm", vector="symb-a" },
+        { name = "MnSymbolC10.tfm", vector="symb-c", parameters=true },
+--        { name = "MnSymbolD10.tfm", vector="symb-d" },
+        { name = "MnSymbolE10.tfm", vector="symb-e", extensym=true, extencust=custE },
+--        { name = "MnSymbolE10.tfm", vector="symb-e", extension=true },
+--        { name = "MnSymbolF10.tfm", vector="symb-f" },
+      },
+    },
+  },
+}

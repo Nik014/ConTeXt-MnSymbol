@@ -1,0 +1,180 @@
+open source     > level 1, order 1, name '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2017.08.15 12:35 MKIV beta  fmt: 2017.8.20  int: english/english
+system          > 
+system          > 'cont-new.mkiv' loaded
+open source     > level 2, order 2, name '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-new.mkiv'
+close source    > level 2, order 2, name '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-new.mkiv'
+system          > files > jobname 'test', input './test', result 'test'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name '/home/nikmil/Dokumenta/Fontovi/MnSymbol/test.tex'
+open source     > level 3, order 4, name 'type-imp-minionpro.mkiv'
+close source    > level 3, order 4, name 'type-imp-minionpro.mkiv'
+fonts           > preloading modern-designsize (mono)
+fonts           > typescripts > unknown library 'modern-designsize'
+fonts           > 'fallback modern-designsize tt 10pt' is loaded
+fonts           > defining > forced type 'pfb' of 'MnSymbol10' not found
+fonts           > defining > font with asked name 'MnSymbol10' is not found using lookup 'file'
+fonts           > virtual math > loading font 'MnSymbol' subfont 1 with name 'MnSymbol10.pfb*virtualmath' at 5pt is skipped, not found
+fonts           > defining > forced type 'pfb' of 'MnSymbol10' not found
+fonts           > defining > font with asked name 'MnSymbol10' is not found using lookup 'file'
+fonts           > virtual math > loading font 'MnSymbol' subfont 1 with name 'MnSymbol10.pfb*virtualmath' at 7pt is skipped, not found
+fonts           > defining > forced type 'pfb' of 'MnSymbol10' not found
+fonts           > defining > font with asked name 'MnSymbol10' is not found using lookup 'file'
+fonts           > virtual math > loading font 'MnSymbol' subfont 1 with name 'MnSymbol10.pfb*virtualmath' at 10pt is skipped, not found
+structure       > sectioning > section @ level 3 : 0.0.1 -> Arrows
+
+Overfull \hbox (32.18384pt too wide) in paragraph at lines 32--56
+[]\3>minionpro-10pt-tt-tf-0--0 \to$\3>minionpro-10pt-mm-mb--1 →$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \uparrow$\3>minionpro-10pt-mm-mb--1 ↑$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \leftarrow$\3>minionpro-10pt-mm-mb--1 ←$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \downarrow$\3>minionpro-10pt-mm-mb--1 ↓$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \nearrow$\3>minionpro-10pt-mm-mb--1 ↗$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \nwarrow$\3>minionpro-10pt-mm-mb--1 ↖$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \swarrow$\3>minionpro-10pt-mm-mb--1 ↙$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \searrow$\3>minionpro-10pt-mm-mb--1 ↘$\3>minionpro-10pt-rm-tf-0--0 ;
+
+\hbox(7.12+2.4)x426.78743, glue set - 1.0, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\3>minionpro-10pt-tt-tf-0--0 \
+.\3>minionpro-10pt-tt-tf-0--0 t
+.\3>minionpro-10pt-tt-tf-0--0 o
+.etc.
+
+
+Overfull \hbox (30.54604pt too wide) in paragraph at lines 32--56
+\3>minionpro-10pt-tt-tf-0--0 \Rightarrow$\3>minionpro-10pt-mm-mb--1 ⇒$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Uparrow$\3>minionpro-10pt-mm-mb--1 ⇑$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Leftarrow$\3>minionpro-10pt-mm-mb--1 ⇐$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Downarrow$\3>minionpro-10pt-mm-mb--1 ⇓$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Nearrow$\3>minionpro-10pt-mm-mb--1 ⇗$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Nwarrow$\3>minionpro-10pt-mm-mb--1 ⇖$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Searrow$\3>minionpro-10pt-mm-mb--1 ⇘$\3>minionpro-10pt-rm-tf-0--0 ;
+
+\hbox(7.35753+2.57)x426.78743, glue set - 1.0, direction TLT
+.\3>minionpro-10pt-tt-tf-0--0 \
+.\3>minionpro-10pt-tt-tf-0--0 R
+.\3>minionpro-10pt-tt-tf-0--0 i
+.\3>minionpro-10pt-tt-tf-0--0 g
+.\3>minionpro-10pt-tt-tf-0--0 h
+.etc.
+
+
+Overfull \hbox (70.41995pt too wide) in paragraph at lines 32--56
+\3>minionpro-10pt-tt-tf-0--0 \Swarrow$\3>minionpro-10pt-mm-mb--1 ⇙$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \leftrightarrow$\3>minionpro-10pt-mm-mb--1 ↔$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \updownarrow$\3>minionpro-10pt-mm-mb--1 ↕$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Leftrightarrow$\3>minionpro-10pt-mm-mb--1 ⇔$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \Updownarrow$\3>minionpro-10pt-mm-mb--1 ⇕$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \twoheadrightarrow$\3>minionpro-10pt-mm-mb--1 ↠$\3>minionpro-10pt-rm-tf-0--0 ;
+
+\hbox(8.14514+3.03528)x426.78743, glue set - 1.0, direction TLT
+.\3>minionpro-10pt-tt-tf-0--0 \
+.\3>minionpro-10pt-tt-tf-0--0 S
+.\3>minionpro-10pt-tt-tf-0--0 w
+.\3>minionpro-10pt-tt-tf-0--0 a
+.\3>minionpro-10pt-tt-tf-0--0 r
+.etc.
+
+structure       > sectioning > section @ level 3 : 0.0.2 -> Binary operators
+
+Overfull \hbox (21.63484pt too wide) in paragraph at lines 60--80
+[]\3>minionpro-10pt-tt-tf-0--0 \cdot$\3>minionpro-10pt-mm-mb--1 ⋅$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \colon$\3>minionpro-10pt-mm-mb--1 ∶$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \cdots$\3>minionpro-10pt-mm-mb--1 ⋯$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \vdots$\3>minionpro-10pt-mm-mb--1 ⋮$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \udots$\3>minionpro-10pt-mm-mb--1 ⋰$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \ddots$\3>minionpro-10pt-mm-mb--1 ⋱$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \therefore$\3>minionpro-10pt-mm-mb--1 ∴$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \because$\3>minionpro-10pt-mm-mb--1 ∵$\3>minionpro-10pt-rm-tf-0--0 ; \3>minionpro-10pt-tt-tf-0--0 \squaredots$\3>minionpro-10pt-mm-mb--1 ∷$\3>minionpro-10pt-rm-tf-0--0 ;
+
+\hbox(15.05+2.4)x426.78743, glue set - 1.0, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\3>minionpro-10pt-tt-tf-0--0 \
+.\3>minionpro-10pt-tt-tf-0--0 c
+.\3>minionpro-10pt-tt-tf-0--0 d
+.etc.
+
+structure       > sectioning > section @ level 3 : 0.0.3 -> Braces
+resolvers       > modules > using user prefixed file 's-math-characters'
+resolvers       > modules > 's-math-characters' is loaded
+open source     > level 3, order 5, name '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.mkiv'
+resolvers       > lua > loading file '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.lua' succeeded
+close source    > level 3, order 5, name '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.mkiv'
+visualize       > enabled
+backend         > xmp > using file '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 2
+pages           > flushing realpage 3, userpage 3
+pages           > flushing realpage 4, userpage 4
+close source    > level 2, order 5, name '/home/nikmil/Dokumenta/Fontovi/MnSymbol/test.tex'
+close source    > level 1, order 5, name '/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-yes.mkiv'
+
+system          > structure > start used structure
+
+used structure  > text: test
+
+system          > structure > stop used structure
+
+
+system          > files > start used files
+
+used file       >    1: filename=char-prv.lua filetype=tex format=tex foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/char-prv.lua fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/char-prv.lua usedmethod=database
+used file       >    2: filename=cont-yes.mkiv filetype=tex foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
+used file       >    3: filename=publ-imp-default.lua filetype=scripts foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+used file       >    4: filename=cont-new.mkiv filetype=tex foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-new.mkiv fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/cont-new.mkiv usedmethod=database
+used file       >    5: filename=lang-exc.lua filetype=scripts foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+used file       >    6: filename=lang-us.lua filetype=scripts foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+used file       >    7: filename=/home/nikmil/Dokumenta/Fontovi/MnSymbol/test.tex foundname=/home/nikmil/Dokumenta/Fontovi/MnSymbol/test.tex fullname=/home/nikmil/Dokumenta/Fontovi/MnSymbol/test.tex usedmethod=direct
+used file       >    8: filename=type-imp-minionpro.mkiv foundname=type-imp-minionpro.mkiv fullname=/home/nikmil/Dokumenta/Fontovi/MnSymbol/type-imp-minionpro.mkiv usedmethod=direct
+used file       >    9: filename=minionpro.lfg foundname=minionpro.lfg fullname=/home/nikmil/Dokumenta/Fontovi/MnSymbol/minionpro.lfg usedmethod=direct
+used file       >   10: filename=mnsymbol.lfg foundname=mnsymbol.lfg fullname=/home/nikmil/Dokumenta/Fontovi/MnSymbol/mnsymbol.lfg usedmethod=direct
+used file       >   11: filename=MnSymbol.map filetype=map format=map foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/map/dvips/mnsymbol/MnSymbol.map fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/map/dvips/mnsymbol/MnSymbol.map usedmethod=database
+used file       >   12: filename=Minion_Pro_Regular_v2030.otf filetype=otf format=otf foundname=/home/nikmil/TeXLive/texmf-local/texmf-local/fonts/opentype/Minion_Pro/Minion_Pro_Regular_v2030.otf fullname=/home/nikmil/TeXLive/texmf-local/texmf-local/fonts/opentype/Minion_Pro/Minion_Pro_Regular_v2030.otf usedmethod=database
+used file       >   13: filename=Minion_Pro_Cond_Italic_Caption_v2030.otf filetype=otf format=otf foundname=/home/nikmil/TeXLive/texmf-local/texmf-local/fonts/opentype/Minion_Pro/Minion_Pro_Cond_Italic_Caption_v2030.otf fullname=/home/nikmil/TeXLive/texmf-local/texmf-local/fonts/opentype/Minion_Pro/Minion_Pro_Cond_Italic_Caption_v2030.otf usedmethod=database
+used file       >   14: filename=MnSymbolA10.tfm filetype=tfm format=tfm foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/tfm/public/mnsymbol/MnSymbolA10.tfm fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/tfm/public/mnsymbol/MnSymbolA10.tfm usedmethod=database
+used file       >   15: filename=MnSymbolC10.tfm filetype=tfm format=tfm foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/tfm/public/mnsymbol/MnSymbolC10.tfm fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/tfm/public/mnsymbol/MnSymbolC10.tfm usedmethod=database
+used file       >   16: filename=MnSymbolE10.tfm filetype=tfm format=tfm foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/tfm/public/mnsymbol/MnSymbolE10.tfm fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/tfm/public/mnsymbol/MnSymbolE10.tfm usedmethod=database
+used file       >   17: filename=s-math-characters.mkiv filetype=tex foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.mkiv fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.mkiv usedmethod=database
+used file       >   18: filename=s-math-characters.lua filetype=tex format=tex foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.lua fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/modules/mkiv/s-math-characters.lua usedmethod=database
+used file       >   19: filename=lmmonoltcond10-regular.otf filetype=otf format=otf foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/opentype/public/lm/lmmonoltcond10-regular.otf fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/opentype/public/lm/lmmonoltcond10-regular.otf usedmethod=database
+used file       >   20: filename=lpdf-pdx.xml filetype=tex foundname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/home/nikmil/TeXLive/texmf-local/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+used file       >   21: filename=MnSymbolE.enc filetype=enc format=enc foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/enc/dvips/mnsymbol/MnSymbolE.enc fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/enc/dvips/mnsymbol/MnSymbolE.enc usedmethod=database
+used file       >   22: filename=MnSymbolC.enc filetype=enc format=enc foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/enc/dvips/mnsymbol/MnSymbolC.enc fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/enc/dvips/mnsymbol/MnSymbolC.enc usedmethod=database
+used file       >   23: filename=MnSymbolA.enc filetype=enc format=enc foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/enc/dvips/mnsymbol/MnSymbolA.enc fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/enc/dvips/mnsymbol/MnSymbolA.enc usedmethod=database
+used file       >   24: filename=MnSymbol10.pfb filetype=pfb format=pfb foundname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/type1/public/mnsymbol/MnSymbol10.pfb fullname=/home/nikmil/TeXLive/texmf-local/texmf-fonts/fonts/type1/public/mnsymbol/MnSymbol10.pfb usedmethod=database
+
+system          > files > stop used files
+
+
+system          > options > start commandline options
+
+used option     > currentrun="3"
+used option     > fulljobname="./test.tex"
+used option     > input="./test.tex"
+used option     > kindofrun="2"
+used option     > maxnofruns="9"
+used option     > no-parse-first-line="true"
+
+system          > options > stop commandline options
+
+system          > options > start commandline files
+
+used file       >    1: ./test.tex
+
+system          > options > stop commandline files
+
+
+mkiv lua stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkiv lua stats  > used cache path: /home/nikmil/TeXLive/texmf-local/texmf-cache/luatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkiv lua stats  > resource resolver: loadtime 0.013 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 24 found files, scanned paths: <none>
+mkiv lua stats  > stored bytecode data: 405 modules (0.249 sec), 91 tables (0.019 sec), 496 chunks (0.268 sec)
+mkiv lua stats  > traced context: maxstack: 1247, freed: 0, unreachable: 1247
+mkiv lua stats  > cleaned up reserved nodes: 64 nodes, 9 lists of 450
+mkiv lua stats  > node memory usage: 2 glue, 2 kern, 2 penalty, 14 attribute, 49 glue_spec, 4 attribute_list, 2 temp, 2 user_defined, 2 pdf_literal
+mkiv lua stats  > node list callback tasks: 7 unique task lists, 8 instances (re)created, 1002 calls
+mkiv lua stats  > attribute processing time: 0.012 seconds front- and backend
+mkiv lua stats  > used backend: pdf (backend for directly generating pdf output)
+mkiv lua stats  > jobdata time: 0.001 seconds saving, 0.001 seconds loading
+mkiv lua stats  > callbacks: 1833 direct, 586 indirect, 2419 total
+mkiv lua stats  > randomizer: resumed with value 0.71348557142237
+mkiv lua stats  > loaded tex modules: 1 requested, all found (*-s-math-characters)
+mkiv lua stats  > loaded patterns: en::2, load time: 0.000
+mkiv lua stats  > result saved in file: test.pdf, compresslevel 3, objectcompresslevel 3
+mkiv lua stats  > loaded fonts: 6 files: lmmonoltcond10-regular.otf, mnsymbola10.tfm, mnsymbolc10.tfm, mnsymbole10.tfm, minion_pro_cond_italic_caption_v2030.otf, minion_pro_regular_v2030.otf
+mkiv lua stats  > font engine: otf 3.102, afm 1.512, tfm 1.000, 7 instances, 4 shared in backend, 1 common vectors, 3 common hashes, load time 0.134 seconds 
+mkiv lua stats  > visualization time: 0.005 seconds
+mkiv lua stats  > unknown math characters: ⋈ (U+022C8) (n=1)
+mkiv lua stats  > page group warning: transparencies are used but no pagecolormodel is set
+mkiv lua stats  > used platform: linux-64, type: unix, binary subtree: texmf-linux-64
+mkiv lua stats  > used engine: luatex version 1.05 with functionality level 6357, banner: this is luatex, version 1.05.0 (tex live 2017)
+mkiv lua stats  > control sequences: 45096 of 65536 + 100000
+mkiv lua stats  > lua properties: engine: lua, used memory: 66 MB (ctx: 66 MB), hash type: lua, hash chars: min(64,40), symbol mask: utf (τεχ)
+mkiv lua stats  > runtime: 0.633 seconds, 4 processed pages, 4 shipped pages, 6.319 pages/second
+

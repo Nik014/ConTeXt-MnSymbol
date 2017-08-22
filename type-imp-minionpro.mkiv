@@ -1,0 +1,98 @@
+%D \module
+%D   [       file=type-imp-minionpro,
+%D        version=2017.08.13,
+%D          title=\CONTEXT\ Typescript Macros,
+%D       subtitle=Minion Pro Opticals,
+%D         author=Nikola Milinković,
+%D           date=\currentdate,
+%D      copyright=Nikola Milinković]
+
+
+\starttypescriptcollection[minionpro]
+%D Minion Pro fonts have normal and condensed variants, as well as following
+%D weights: Normal, Medium, Semibold and Bold.
+%D 
+%D Weights are implemented as \CONTEXT\ font alternatives.
+%D Condensed variants are implemented as a new font style.
+  \starttypescript [all] [minionpro]
+    \definefontstyle [serifcondensed] [rmcn]
+    \definefontalternative[me]  % medium
+    \definefontalternative[mi]  % medium italic
+    \definefontalternative[sf]  % semibold
+    \definefontalternative[si]  % semibold italic  
+  %\stoptypescript
+
+  \definealternativestyle [medium] [\me] []
+  \definealternativestyle [mediumitalic,italicmedium] [\mi] []
+  \definealternativestyle [semibold] [\sf] []
+  \definealternativestyle [semibolditalic,italicsemibold] [\si] []
+  \definealternativestyle [serifcondensed] [\rmcn] []
+  \stoptypescript
+  % \starttypescript [serif] [minionpro]
+  %   \definefontfeature[slanted][default][slant=.2]
+  %   \definefontalternative[cx]  % condensed
+  %   \definefontalternative[ci]  % condensed italic
+  %   \definefontalternative[bc]  % bold condensed
+  %   \definefontalternative[bj]  % bold condensed italic
+  %   \definefontalternative[mc]  % condensed medium
+  %   \definefontalternative[mj]  % condensed medium italic
+  %   \definefontalternative[sd]  % semibold condensed
+  %   \definefontalternative[sj]  % semibold condensed italic
+  % \stoptypescript
+  
+  \starttypescript [serif] [minionpro]
+    \loadfontgoodies[minionpro]
+    \definefontsynonym [SerifBold]               [MinionBold] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [SerifBoldItalic]         [MinionBoldItalic] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [Serif]                   [Minion] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [SerifItalic]             [MinionItalic] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [SerifMedium]             [MinionMedium] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [SerifMediumItalic]       [MinionMediumItalic] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [SerifSemibold]           [MinionSemibold] [features=default,goodies=minionpro,designsize=auto]
+    \definefontsynonym [SerifSemiboldItalic]     [MinionSemiboldItalic] [features=default,goodies=minionpro,designsize=auto]
+
+    \definebodyfont [default] [rm]
+      [me=SerifMedium sa 1,
+       mi=SerifMediumItalic sa 1,
+       sf=SerifSemibold sa 1,
+       si=SerifSemiboldItalic sa 1,
+       tf=Serif sa 1,
+       bf=SerifBold sa 1,
+       bi=SerifBoldItalic sa 1,
+       it=SerifItalic sa 1]
+  \stoptypescript
+
+ \starttypescript [serifcondensed] [minionpro]
+   \loadfontgoodies[minionpro]
+   \definefontsynonym [SerifBoldCond]           [MinionBoldCond] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifBoldCondItalic]     [MinionBoldCondItalic] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifCond]               [MinionCond] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifCondItalic]         [MinionCondItalic] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifMediumCond]         [MinionMediumCond] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifMediumCondItalic]   [MinionMediumCondItalic] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifSemiboldCond]       [MinionSemiboldCond] [features=default,goodies=minionpro,designsize=auto]
+   \definefontsynonym [SerifSemiboldCondItalic] [MinionSemiboldCondItalic] [features=default,goodies=minionpro,designsize=auto]
+
+   \definebodyfont [default] [rmcn]
+      [me=SerifMediumCond sa 1,
+       mi=SerifMediumCondItalic sa 1,
+       sf=SerifSemiboldCond sa 1,
+       si=SerifSemiboldCondItalic sa 1,
+       tf=SerifCond sa 1,
+       bf=SerifBoldCond sa 1,
+       bi=SerifBoldCondItalic sa 1,
+       it=SerifCondItalic sa 1]
+ \stoptypescript
+
+ \starttypescript [math] [minionoverpagella] 
+   \loadfontgoodies[mnsymbol]
+   \definefontsynonym [MathRoman] [MnSymbol@mnsymbol]
+ \stoptypescript
+        
+ \starttypescript [minionpro]
+   \definetypeface [minionpro] [rm]   [serif]     [minionpro] [default]
+   \definetypeface [minionpro] [ss] [serif] [minionpro] [default]
+   \definetypeface [minionpro] [rmcn] [serifcondensed] [minionpro] [default]
+   \definetypeface [minionpro] [mm] [math] [minionoverpagella] [default]
+ \stoptypescript
+\stoptypescriptcollection
