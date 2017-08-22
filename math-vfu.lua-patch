@@ -1,0 +1,30 @@
+--- math-vfu.lua-backup	2017-08-19 11:54:38.138865885 +0200
++++ math-vfu.lua	2017-08-22 03:24:56.393736426 +0200
+@@ -837,7 +837,7 @@
+                 end
+             elseif not newparameters then
+                 report_virtual("no parameters set in font %a",name)
+-            elseif ss.extension then
++            elseif ss.extension or ss.extensym then
+                 mathparameters.math_x_height          = newparameters.x_height or 0        -- math_x_height          : height of x
+                 mathparameters.default_rule_thickness = newparameters[ 8]      or 0        -- default_rule_thickness : thickness of \over bars
+                 mathparameters.big_op_spacing1        = newparameters[ 9]      or 0        -- big_op_spacing1        : minimum clearance above a displayed op
+@@ -918,7 +918,7 @@
+                                 local italic = fci.italic
+                                 if italic and italic > 0 then
+                                         -- int_a^b
+-                                    if isextension then
++                                    if isextension or ss.extensym then
+                                         width = width + italic -- for obscure reasons the integral as a width + italic correction
+                                     end
+                                 end
+@@ -959,6 +959,9 @@
+                                 end
+                             end
+                         end
++                        if ss.extensym then
++                            ss.extencust(characters,s)
++                        end
+                         if isextension then
+                             -- todo: if multiple ex, then 256 offsets per instance
+                             local extension = mathencodings["large-to-small"]
