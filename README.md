@@ -1,2 +1,3 @@
 # ConTeXt-MnSymbol
-ConTeXt support for MnSymbol fonts
+
+ConTeXt support for MnSymbol fonts. (Archived)
